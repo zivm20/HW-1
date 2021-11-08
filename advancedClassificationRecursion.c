@@ -31,20 +31,21 @@ int isArmstrong(int n){
 
 
 
-static int isPalindromeRec(int n,int flg){
-  if(n>0){
-    int nDigits = log10(n);
-    int leftNum = n/pow(10,nDigits);
-    int rightNum = n%10;
+static int isPalindromeRec(int n,int flg,int nDigits, int index){
+
+  if(index < nDigits-index){
+    int leftNum = (int)((n/pow(10,nDigits-index)))%10;
+    int rightNum = (int)((n/pow(10,index)))%10;
     if(leftNum != rightNum){
       flg = false;
     }
-    int newN = (n % (int)(pow(10,nDigits)) )/10;
-    return isPalindromeRec(newN ,flg);
+
+    return isPalindromeRec(n ,flg,nDigits,index+1);
   }
   return flg;
 }
 
 int isPalindrome(int n){
-  return isPalindromeRec(n,true);
+  int nDigits = log10(n);
+  return isPalindromeRec(n,true,nDigits,0);
 }
