@@ -12,6 +12,7 @@ int main(){
     num2 = temp;
   }
   int i;
+  
   printf("\n");
   for(i = num1;i<=num2;i++){
       if(isPrime(i)){
