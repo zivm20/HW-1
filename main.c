@@ -15,7 +15,7 @@ int main(){
   printf("The Armstrong numbers are:");
   for(i = num1;i<=num2;i++){
       if(isArmstrong(i)){
-        printf(" %d ",i);
+        printf(" %d",i);
       }
   }
   printf("\nThe Palindromes are:");
