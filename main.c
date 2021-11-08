@@ -3,32 +3,40 @@
 #include "NumClass.h"
 
 int main(){
-  int ans = isStrong(145);
-  printf("is Strong 145: %d\n",ans);
-  ans = isPrime(13);
-  printf("is prime 13: %d\n",ans);
-  ans = isArmstrong(407);
-  printf("is armstrong 407: %d\n",ans);
-  int inp = 808;
-  ans = isPalindrome(inp);
-  printf("is Palindrome %d: %d\n",inp,ans);
-  inp = 52625;
-  ans = isPalindrome(inp);
-  printf("is Palindrome %d: %d\n",inp,ans);
-  inp = 4334;
-  ans = isPalindrome(inp);
-  printf("is Palindrome %d: %d\n",inp,ans);
-  inp = 853412;
-  ans = isPalindrome(inp);
-  printf("is Palindrome %d: %d\n",inp,ans);
-  inp = 1231;
-  ans = isPalindrome(inp);
-  printf("is Palindrome %d: %d\n",inp,ans);
-  inp = 1;
-  ans = isPalindrome(inp);
-  printf("is Palindrome %d: %d\n",inp,ans);
-
-
+  int num1,num2;
+  scanf("%d",&num1);
+  scanf("%d",&num2);
+  if(num1 > num2){
+    int temp = num1;
+    num1 = num2;
+    num2 = temp;
+  }
+  int i;
+  printf("\n");
+  for(i = num1;i<=num2;i++){
+      if(isPrime(i)){
+        printf("%d ",i);
+      }
+  }
+  printf("\n");
+  for(i = num1;i<=num2;i++){
+      if(isArmstrong(i)){
+        printf("%d ",i);
+      }
+  }
+  printf("\n");
+  for(i = num1;i<=num2;i++){
+      if(isStrong(i)){
+        printf("%d ",i);
+      }
+  }
+  printf("\n");
+  for(i = num1;i<=num2;i++){
+      if(isPalindrome(i)){
+        printf("%d ",i);
+      }
+  }
+  printf("\n");
 
   return 0;
 }

@@ -6,7 +6,6 @@ static int isArmstrongRec(int n,int sum,int nDigits){
 
   if(n > 0){
     sum += pow(n%10,nDigits);
-    printf("sum: %d \n",sum );
   }
   else{
     return sum;
@@ -19,7 +18,6 @@ static int isArmstrongRec(int n,int sum,int nDigits){
 int isArmstrong(int n){
   int nDigits = ceil(log10(n));
   int sum = isArmstrongRec(n,0,nDigits);
-  printf("this is recursive");
   if(sum == n){
     return true;
   }

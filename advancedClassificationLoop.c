@@ -6,7 +6,6 @@ int isArmstrong(int n){
   int nDigits = ceil(log10(n));
   int sum = 0;
   int iterator = n;
-  printf("this is loop");
   while(iterator>0){
     sum += pow(iterator%10,nDigits);
     iterator = iterator/10;
