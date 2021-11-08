@@ -50,16 +50,3 @@ libclassloops.o: advancedClassificationLoop.c NumClass.h basicClassification.c
 
 main.o: main.c NumClass.h
 	$(CC) $(FLAGS) -c main.c
-
-
-#libclassrec.so: $(REC_OBJ)
-#	$(CC) -shared -o libclassrec.so $(REC_OBJ)
-
-#libclassloops.so: $(LOOP_OBJ)
-#	$(CC) -shared -o libclassloops.so $(REC_OBJ)
-
-#libclassrec.a: $(REC_OBJ)
-#	ar -rcs libclassrec.a $(REC_OBJ)
-
-#libclassloops.a: $(LOOP_OBJ)
-#	ar -rcs libclassloops.a $(LOOP_OBJ)

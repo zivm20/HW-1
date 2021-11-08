@@ -2,15 +2,14 @@
 #include "NumClass.h"
 #include <math.h>
 
+//recursive helper function
 static int isArmstrongRec(int n,int sum,int nDigits){
-
   if(n > 0){
     sum += pow(n%10,nDigits);
   }
   else{
     return sum;
   }
-
   return isArmstrongRec(n/10, sum, nDigits);
 }
 
@@ -30,7 +29,7 @@ int isArmstrong(int n){
 
 
 
-
+//recursive helper function
 static int isPalindromeRec(int n,int flg,int nDigits, int index){
 
   if(index < nDigits-index){

@@ -4,6 +4,7 @@
 
 int isPrime(int n){
   int i;
+  //According to the self tester, 1 is considered prime
   if(n < 1){
     return false;
   }
